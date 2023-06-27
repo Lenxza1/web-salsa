@@ -4,16 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>Paper Case Flower Shop</title>
     </head>
     <body>
-        <div class="login-form">
-            <h4 style="color: #D3D3D3;">Login</h4>
-            <h5>Daftar atau Login dengan nomor Handphone</h5>
-            <div class="login-textfield">
-                <svg width="100" height="100">
-                    <rect x="0" y="0" />
-                </svg>
+        <div class="flex-center">
+            <div class="logo-index">
+                <img src="assets/img/b4d92b5c-7f81-4b2f-8ac0-bbba041c8b2e.jfif" alt="" height="150" width="150">
+                <h4>Paper Case Flower Shop</h4>
+            </div>
+            <div class="login-form">
+                <h3>Login</h3>
+                <h5>Daftar atau Login dengan Nomor Handphone</h5>
+                <div class="login-field">
+                    <object data="assets/img/id.svg" height="20" width="20"></object>
+                    <select name="country-code" id="country-code" class="country-code">
+                        <option value="Indonesia" selected>+62</option>
+                        <option value="Amerika Serikat">+1</option>
+                        <option value="China">+86</option>
+                    </select>
+                    <input type="text" class="login-textfield">
+                </div>
+                <a href="home.html">
+                    <button type="button" class="login-btn">Login</button>
+                </a>
+                <a href="home.html">
+                    <object data="assets/img/7123025_logo_google_g_icon.svg" height="30" width="30"></object>
+                </a>
             </div>
         </div>
     </body>
