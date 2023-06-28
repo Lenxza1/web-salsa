@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>Checkout</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="account">
-                    <a href="#" class="account-item">
-                        <h6>Account Name</h6>
-                        <i class='bx bxs-heart-circle'></i>
-                    </a>
-                </div>
-                <div class="navbar">
-                    <a href="#" class="logo">
-                        <img src="assets/img/Funzionera primary.png" alt="" height="50px" width="50px">
-                    </a>
-                    <h4 style="position: relative; top: 5px; right: 70%; font-size: 36px; color: #f81276;">Checkout</h4>
-                </div> 
-            </nav>
-        </header>
-        <section class="checkout">
 
-        </section>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .checkout {
+            margin: 100px 5rem;
+            max-width: 1080px;
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .flex-row {
+            flex-direction: row !important;
+        }
+
+        .flex-column {
+            flex-direction: column !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="account">
+                <a href="#" class="account-item">
+                    <h6>Account Name</h6>
+                    <i class='bx bxs-heart-circle'></i>
+                </a>
+            </div>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <img src="assets/img/Funzionera primary.png" alt="" height="50px" width="50px">
+                </a>
+                <h4 style="position: relative; top: 5px; right: 70%; font-size: 36px; color: #f81276;">Checkout</h4>
+            </div>
+        </nav>
+    </header>
+    <section class="checkout">
+        <div class="d-flex flex-column">
+            <div class="title">
+                <i class='bx bx-map'></i>
+                Delivery Address
+            </div>
+            <div class="d-fle flex-row">
+                <span>Account Name</span>
+                <span>Jl, XXX RT.XX/XX</span>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="title">
+                Products Ordered
+            </div>
+            <div class="d-fle flex-row" style="align-items: center;">
+                <img src="assets/img/Butterfly mix.jpg" alt="" style="height: 40px;">
+                <span>Butterfly Mix</span>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>

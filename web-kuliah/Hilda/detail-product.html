@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Product</title>
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .d-flex {
+            display: flex !important;
+        }
+
+        .product {
+            /* background: red; */
+            max-width: 1080px;
+            height: 100px;
+            margin: 100px auto;
+            padding-bottom: 100rem;
+        }
+
+        .product-description {
+            /* background: red; */
+            max-width: 1080px;
+            height: 100px;
+            margin: 100px auto 0;
+        }
+
+        .flex-row {
+            flex-direction: row !important;
+        }
+
+        .flex-column {
+            flex-direction: column !important;
+        }
+
+        .content-between {
+            justify-content: space-between !important;
+        }
+
+        .splide {
+            margin: 0 auto;
+        }
+
+        .btn {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-purple {
+            color: white;
+            background: purple;
+            outline: none;
+        }
+
+        .btn-star {
+            color: white;
+            background: orangered;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .btn-transparent {
+            background: transparent;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            color: black;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 0px;
+            cursor: pointer;
+        }
+
+        .btn-transparent i {
+            font-size: 25px
+        }
+
+        .thumbnails {
+            display: flex;
+            margin: 1rem auto 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            list-style: none;
+            margin: 0 0.2rem;
+            cursor: pointer;
+            opacity: 0.3;
+        }
+
+        .thumbnail.is-active {
+            opacity: 1;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-carousel {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .product-pricing {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .pricing-title {
+            gap: 20px;
+        }
+
+        .pricing-title .title {
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .rating {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .rating .title {
+            font-weight: bold;
+            color: orangered;
+        }
+
+        .checked {
+            color: orangered;
+        }
+
+        .star {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sub-rating {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .shipping {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .shipping .title {
+            font-size: 24px;
+        }
+
+        .shipping .sub-title {
+            display: flex;
+            gap: 15px;
+        }
+
+        .shipping .sub-title .description {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .shipping .sub-title .icon {
+            font-size: 50px;
+        }
+
+        .size {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .size .title {
+            font-size: 24px;
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qty .title {
+            font-size: 24px;
+            padding: 10px 0;
+        }
+
+        .qty .sub-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qty .sub-title .description {
+            font-weight: 900;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 25px 0;
+            color: orangered;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="account">
+                <a href="#" class="account-item">
+                    <h6>Account Name</h6>
+                    <i class='bx bxs-heart-circle'></i>
+                </a>
+            </div>
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <img src="assets/img/Funzionera primary.png" alt="" height="50px" width="50px">
+                </a>
+                <div class="nav-items">
+                    <a href="#" class="nav-item search">
+                        <input type="search">
+                        <i class='bx bx-search-alt-2'></i>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class='bx bxs-heart-circle'></i>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class='bx bx-message-rounded-dots'></i>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class='bx bx-cart-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="product">
+            <div class="d-flex flex-row" style="margin-bottom: 10rem;">
+                <div class="product-carousel">
+                    <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="assets/img/cust1.jpg" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/cust2.jpg" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="assets/img/cust3.jpg" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <ul id="thumbnails" class="thumbnails">
+                        <li class="thumbnail">
+                            <img src="assets/img/cust1.jpg" alt="" />
+                        </li>
+                        <li class="thumbnail">
+                            <img src="assets/img/cust2.jpg" alt="" />
+                        </li>
+                        <li class="thumbnail">
+                            <img src="assets/img/cust3.jpg" alt="" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-pricing">
+                    <div class="d-flex flex-row pricing-title">
+                        <div class="btn btn-star">
+                            Star
+                        </div>
+                        <h1 class="title">BUTTERFLY MIX</h1>
+                    </div>
+                    <div class="rating">
+                        <div class="star">
+                            <div class="title">4.9</div>
+                            <div class="rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <div class="sub-rating">
+                            20 Ratings
+                        </div>
+                        <div class="sub-rating">
+                            20 Sold
+                        </div>
+                    </div>
+                    <div class="price">
+                        Rp. 28.000, -
+                    </div>
+                    <div class="shipping">
+                        <div class="title">
+                            Shipping:
+                        </div>
+                        <div class="sub-title">
+                            <div class="icon">
+                                <i class='bx bxs-truck'></i>
+                            </div>
+                            <div class="description">
+                                <span>Shipping Fee</span>
+                                <span>Rp. 0 - Rp. 30.000,-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size">
+                        <div class="title">
+                            Size:
+                        </div>
+                        <button class="btn">All Size</button>
+                    </div>
+                    <div class="qty">
+                        <div class="title">
+                            Quantity:
+                        </div>
+                        <div class="sub-title">
+                            <button class="btn">-</button>
+                            <input type="text" value="1" style="width: 10px; text-align: center;">
+                            <button class="btn">+</button>
+                            <div class="description">10 Piesces availabe</div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row content-between mt-2">
+                        <button class="btn btn-purple">Add To Cart</button>
+                        <button class="btn btn-purple">Buy Now</button>
+                        <button class="btn btn-transparent"><i class='bx bx-heart-circle'></i> Favorite</button>
+                        <button class="btn btn-transparent"><i class='bx bx-paper-plane'></i>Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-description">
+                <table style="margin-bottom: 10px;">
+                    <thead>
+                        <tr><span style="font-weight: bold;">Product Description</span></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                White Butterfly
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>:</td>
+                            <td>
+                                Alloy + Pearl + Butterfly Beads
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Color
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                as the picture
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Style
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                Simple & Fashion
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gender
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                Famale
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Stock
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                20 pcs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Occasion
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                Party Birthday Gift or Daily use
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Package
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                1 pcs bracelet
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="margin-bottom: 5rem;">
+                    <tbody>
+                        <tr>
+                            <td>-</td>
+                            <td>
+                                If you have any problem about the shipping, please feel free to contact us, we can help
+                                you.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>
+                                Any problem, please contact us before open the dispute or leaving us a negative
+                                feedback. We
+                                will try our best to solve problem
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="margin-bottom: 3rem;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>Review</span>
+                            </td>
+                            <td>
+                                <span>:</span>
+                            </td>
+                            <td>
+                                <div class="star">
+                                    <div class="title">3.9</div>
+                                    <div class="rate">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="reviewers">
+                    <div class="reviewer" style="display: flex;">
+                        <img src="assets/img/cust1.jpg" class="avatar" style="margin-right: 15px;">
+                        <div class="flex flex-row">
+                            <div class="title">Seong Yohan</div>
+                            <div class="sub-title">
+                                <div class="rate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        var splide = new Splide("#main-slider", {
+            width: 600,
+            height: 500,
+            pagination: false,
+            cover: true
+        });
+
+        var thumbnails = document.getElementsByClassName("thumbnail");
+        var current;
+
+        for (var i = 0; i < thumbnails.length; i++) {
+            initThumbnail(thumbnails[i], i);
+        }
+
+        function initThumbnail(thumbnail, index) {
+            thumbnail.addEventListener("click", function () {
+                splide.go(index);
+            });
+        }
+
+        splide.on("mounted move", function () {
+            var thumbnail = thumbnails[splide.index];
+
+            if (thumbnail) {
+                if (current) {
+                    current.classList.remove("is-active");
+                }
+
+                thumbnail.classList.add("is-active");
+                current = thumbnail;
+            }
+        });
+
+        splide.mount();
+    </script>
+</body>
+
+</html>
